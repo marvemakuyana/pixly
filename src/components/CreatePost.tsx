@@ -8,6 +8,7 @@ import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { ImageIcon, Loader2Icon, SendIcon } from "lucide-react";
 import { createPost } from "@/actions/post.action";
+import toast from "react-hot-toast";
 
 //cannot use async in a client component
 function CreatePost() {
@@ -27,8 +28,12 @@ function CreatePost() {
         setContent("");
         setImageUrl("");
         setShowImageUpload(false);
+
+        toast.success("Post created successfully");
       }
     } catch (error) {
+      console.error("Failed to create post:", error);
+      toast.error("Failed to create a post");
     } finally {
       setIsPosting(false);
     }
