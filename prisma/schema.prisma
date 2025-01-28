@@ -100,7 +100,7 @@ model Notification {
   userId    String
   creatorId String
   type      NotificationType
-  read      Boolean
+  read      Boolean          @default(false)
   postId    String?
   commentId String?
   createdAt DateTime         @default(now())
