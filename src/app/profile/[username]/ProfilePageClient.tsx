@@ -117,7 +117,7 @@ function ProfilePageClient({
                         {user._count.following.toLocaleString()}
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        Following
+                        Followers
                       </div>
                     </div>
                     <Separator orientation="vertical" />
@@ -126,7 +126,7 @@ function ProfilePageClient({
                         {user._count.followers.toLocaleString()}
                       </div>
                       <div className="text-sm text-muted-foreground">
-                        Followers
+                        Following
                       </div>
                     </div>
                     <Separator orientation="vertical" />
